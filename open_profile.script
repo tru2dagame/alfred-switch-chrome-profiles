@@ -1,0 +1,9 @@
+on alfred_script(q)
+    set GProfile to q
+
+    tell application "System Events" to tell process "Google Chrome"
+        delay 0.1
+        -- menu bar item 8 is "Profiles", use "8" to prevent language issue
+        click menu item GProfile of menu 1 of menu bar item 8 of menu bar 1
+    end tell
+end alfred_script
