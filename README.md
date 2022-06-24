@@ -7,9 +7,11 @@ Use Apple Script to open Chrome browser profiles **without opening a new window 
 ![alfred-switch-chrome-profiles demo](demo.gif)
 
 ## Requirement
-`jq`
+- `jq`
+- `fzf`
+
 ```
-brew install jq
+brew install jq fzf
 ```
 
 ## Install
