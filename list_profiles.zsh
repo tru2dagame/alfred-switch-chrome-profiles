@@ -16,7 +16,7 @@ if pgrep -xq -- "${SERVICE}"; then
     end tell')
 	# Make strings to json and delete "Add" and "Edit" options
     profile=`echo $profile | jq -R 'split(", ")' | jq -cs | jq -r '.[][] | select(length > 0) | select(. | contains("Add")|not) | select(. | contains("Edit")|not) '`
-
+    echo $profile > ${alfred_workflow_data}/profiles.txt
 else
 
     cat << EOB
