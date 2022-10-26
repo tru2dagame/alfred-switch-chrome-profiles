@@ -1,5 +1,5 @@
 #!/bin/zsh
-export PATH=$JQ_PATH:$PATH
+export PATH=$TOOLS_PATH:$PATH
 [[ -d "${alfred_workflow_data}" ]] || mkdir "${alfred_workflow_data}"
 
 source check-jq.sh

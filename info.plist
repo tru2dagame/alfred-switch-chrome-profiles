@@ -6,32 +6,6 @@
 	<string>com.tru2dagame.switch-chrome-profiles</string>
 	<key>connections</key>
 	<dict>
-		<key>4A462803-FB80-493B-9307-4626D11177ED</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>ADF48F6B-9297-483F-A433-EDAACAE13B71</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>86CBCDAA-666D-4F5B-8C95-E01C17FDA60A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>ADF48F6B-9297-483F-A433-EDAACAE13B71</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>ADF48F6B-9297-483F-A433-EDAACAE13B71</key>
 		<array>
 			<dict>
@@ -49,7 +23,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DA7F96E2-2E77-4191-80C1-8937410CE6EA</string>
+				<string>CDF67DD6-F349-4266-985C-047F43559A11</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -84,40 +58,18 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>list_profiles.zsh</string>
-				<key>type</key>
-				<integer>8</integer>
+				<key>tasksettings</key>
+				<dict>
+					<key>app_list</key>
+					<string>Google Chrome</string>
+				</dict>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/macOS/app.open</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.automation.task</string>
 			<key>uid</key>
-			<string>4A462803-FB80-493B-9307-4626D11177ED</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Google Chrome.app</string>
-				</array>
-				<key>toggle</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
-			<key>uid</key>
-			<string>DA7F96E2-2E77-4191-80C1-8937410CE6EA</string>
+			<string>CDF67DD6-F349-4266-985C-047F43559A11</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -224,6 +176,8 @@ echo $profile | jq -nR '{ "items":
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -231,29 +185,6 @@ echo $profile | jq -nR '{ "items":
 			<string>F0B313A8-FD37-4FDF-9675-35014FB26067</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>check-jq.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>86CBCDAA-666D-4F5B-8C95-E01C17FDA60A</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -276,98 +207,66 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>on run argv
-  set theQuery to item 1 of argv
-  return theQuery
-end runfddfdf</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>open_profile.script</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>315D221F-1C1A-436A-A69B-83CAFB7F04F9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
-	<string>Edit jq path if you need.
-
-Defaults are (M1/Intel) homebrew path</string>
+	<string>Run `cp` to switch to or open a different Google Chrome profile.</string>
 	<key>uidata</key>
 	<dict>
-		<key>315D221F-1C1A-436A-A69B-83CAFB7F04F9</key>
-		<dict>
-			<key>xpos</key>
-			<integer>780</integer>
-			<key>ypos</key>
-			<integer>345</integer>
-		</dict>
-		<key>4A462803-FB80-493B-9307-4626D11177ED</key>
-		<dict>
-			<key>xpos</key>
-			<integer>75</integer>
-			<key>ypos</key>
-			<integer>65</integer>
-		</dict>
-		<key>86CBCDAA-666D-4F5B-8C95-E01C17FDA60A</key>
-		<dict>
-			<key>xpos</key>
-			<integer>80</integer>
-			<key>ypos</key>
-			<integer>185</integer>
-		</dict>
 		<key>ADF48F6B-9297-483F-A433-EDAACAE13B71</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<real>80</real>
 			<key>ypos</key>
-			<integer>135</integer>
+			<real>115</real>
+		</dict>
+		<key>CDF67DD6-F349-4266-985C-047F43559A11</key>
+		<dict>
+			<key>xpos</key>
+			<real>520</real>
+			<key>ypos</key>
+			<real>40</real>
 		</dict>
 		<key>D70945CC-FFC1-4A9E-B7DE-46690B348B7C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>780</integer>
+			<real>520</real>
 			<key>ypos</key>
-			<integer>205</integer>
-		</dict>
-		<key>DA7F96E2-2E77-4191-80C1-8937410CE6EA</key>
-		<dict>
-			<key>xpos</key>
-			<integer>780</integer>
-			<key>ypos</key>
-			<integer>75</integer>
+			<real>185</real>
 		</dict>
 		<key>F0B313A8-FD37-4FDF-9675-35014FB26067</key>
 		<dict>
 			<key>xpos</key>
-			<integer>570</integer>
+			<real>310</real>
 			<key>ypos</key>
-			<integer>145</integer>
+			<real>120</real>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-		<key>JQ_PATH</key>
-		<string>/opt/homebrew/bin:/usr/local/bin</string>
-	</dict>
-	<key>variablesdontexport</key>
-	<array/>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>/opt/homebrew/bin:/usr/local/bin</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Extra locations to look for jq and fzf.</string>
+			<key>label</key>
+			<string>Tools Path</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>TOOLS_PATH</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>1.2</string>
+	<string>1.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/tru2dagame/alfred-switch-chrome-profiles</string>
 </dict>
