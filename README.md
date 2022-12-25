@@ -1,4 +1,6 @@
 # Alfred-Switch-Chrome-Profiles
+![screenshots](workflow.png)
+
 
 ## Description
 Use Apple Script to open Chrome browser profiles **without opening a new window every time**.
